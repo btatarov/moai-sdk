@@ -124,6 +124,7 @@ public class MoaiAmazonBilling implements PurchasingListener {
 		final String sku 		= purchaseResponse.getReceipt ().getSku ();
 
         final PurchaseResponse.RequestStatus requestStatus = purchaseResponse.getRequestStatus ();
+		MoaiLog.i ( "MoaiAmazonBilling  purchasing: " + sku + " with status: " + requestStatus );
 
         switch ( requestStatus ) {
 

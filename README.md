@@ -21,8 +21,7 @@ Windows Build: [![Build status](https://ci.appveyor.com/api/projects/status/skkh
 * MOAIColor::setColorHSL
 * MOAIImage::loadDual (based on [Stirfire Studios](https://github.com/StirfireStudios/moai-dev))
 * MOAIParticlePexPlugin::loadFromString
-* MOAISim.exitApp (desktop hosts)
-* TODO: move loadDual in a separate module (loader)
+* MOAISim::exitApp (desktop hosts)
 
 ### Android
 * Full screen mode with cutout (notch) support
@@ -51,15 +50,15 @@ Windows Build: [![Build status](https://ci.appveyor.com/api/projects/status/skkh
 ### iOS
 * CHANGE: framework directory separation (moved from 3rdparty to 3rdparty-ios)
 * MOAILucidViewIOS (transparent view wrapper responding only to touches in child views)
-* adcolony-3.2.1 (rewarded video)
-* admob-7.24.0 (intersitial and banner)
-* applovin-4.3.1 (interstitial and rewarded video)
-* chartboost-7.0.1 (interstitial and rewarded video)
+* adcolony-4.1.2 (rewarded video)
+* admob-7.24.0 (interstitial and banner)
+* applovin-6.10.3 (interstitial and rewarded video)
+* chartboost-8.0.4 (interstitial and rewarded video)
 * crittercism-5.6.8
 * facebook-4.26.0
 * revmob-10.0.0 (interstitial, banner and rewarded video)
 * startapp-3.5.0 (interstitial, banner and return ad)
-* vungle-5.2.0 (rewarded video)
+* vungle-6.4.6 (rewarded video)
 * util/host-ios ([hosts.lua sample](https://github.com/btatarov/moai-sdk/blob/postmorph/util/host-ios/hosts.lua.sample))
 
 ### Samples

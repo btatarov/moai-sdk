@@ -1,7 +1,7 @@
 FRAMEWORKS = {
 
     AdColony = {
-        MOAI_SDK_HOME .. '3rdparty-ios/adcolony-3.2.1/AdColony.framework'
+        MOAI_SDK_HOME .. '3rdparty-ios/adcolony-4.1.2/AdColony.framework'
     },
 
     AdMob = {
@@ -9,11 +9,12 @@ FRAMEWORKS = {
     },
 
     AppLovin = {
-        MOAI_SDK_HOME .. '3rdparty-ios/applovin-4.3.1/AppLovinSDK.framework'
+        MOAI_SDK_HOME .. '3rdparty-ios/applovin-6.10.3/AppLovinSDKResources.bundle',
+        MOAI_SDK_HOME .. '3rdparty-ios/applovin-6.10.3/AppLovinSDK.framework'
     },
 
     ChartBoost = {
-        MOAI_SDK_HOME .. '3rdparty-ios/chartboost-7.0.1/Chartboost.framework'
+        MOAI_SDK_HOME .. '3rdparty-ios/chartboost-8.0.4/Chartboost.framework'
     },
 
     Crittercism = {
@@ -37,7 +38,7 @@ FRAMEWORKS = {
     },
 
     Vungle = {
-        MOAI_SDK_HOME .. '3rdparty-ios/vungle-5.2.0/VungleSDK.framework',
+        MOAI_SDK_HOME .. '3rdparty-ios/vungle-6.4.6/VungleSDK.framework',
     },
 }
 

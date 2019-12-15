@@ -84,6 +84,10 @@ configureHost = function ()
     MOAIFileSystem.copy ( output .. 'Moai Template.xcodeproj', output .. hostconfig[ 'APP_NAME' ] .. '.xcodeproj' )
     MOAIFileSystem.deleteDirectory ( output .. 'Moai Template.xcodeproj', true )
 
+    --rename .entitlements file
+    MOAIFileSystem.copy ( output .. 'Moai Template.entitlements', output .. hostconfig[ 'APP_NAME' ] .. '.entitlements' )
+    MOAIFileSystem.deleteFile ( output .. 'Moai Template.entitlements', true )
+
     -- copy icons
     if ( hostconfig[ 'ICONS' ] ) then
 

@@ -58,6 +58,9 @@
 		<string>fbauth2</string>
 		<string>fbshareextension</string>
 		<string>fbapi20150629</string>
+		<string>instagram</string>
+		<string>tumblr</string>
+		<string>twitter</string>
 	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>

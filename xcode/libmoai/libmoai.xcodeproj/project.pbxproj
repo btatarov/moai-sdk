@@ -4537,15 +4537,15 @@
 		43B309511CBD249B00DF3017 /* MOAIFmodStudioChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MOAIFmodStudioChannel.h; path = "../../src/moai-fmod-studio/MOAIFmodStudioChannel.h"; sourceTree = SOURCE_ROOT; };
 		43B309521CBD249B00DF3017 /* MOAIFmodStudioSound.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MOAIFmodStudioSound.cpp; path = "../../src/moai-fmod-studio/MOAIFmodStudioSound.cpp"; sourceTree = SOURCE_ROOT; };
 		43B309531CBD249B00DF3017 /* MOAIFmodStudioSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MOAIFmodStudioSound.h; path = "../../src/moai-fmod-studio/MOAIFmodStudioSound.h"; sourceTree = SOURCE_ROOT; };
-		43B309631CBD28D000DF3017 /* fmod_codec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fmod_codec.h; path = ../../3rdparty/fmod/inc/fmod_codec.h; sourceTree = "<group>"; };
-		43B309641CBD28D000DF3017 /* fmod_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fmod_common.h; path = ../../3rdparty/fmod/inc/fmod_common.h; sourceTree = "<group>"; };
-		43B309651CBD28D000DF3017 /* fmod_dsp_effects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fmod_dsp_effects.h; path = ../../3rdparty/fmod/inc/fmod_dsp_effects.h; sourceTree = "<group>"; };
-		43B309661CBD28D000DF3017 /* fmod_dsp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fmod_dsp.h; path = ../../3rdparty/fmod/inc/fmod_dsp.h; sourceTree = "<group>"; };
-		43B309671CBD28D000DF3017 /* fmod_errors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fmod_errors.h; path = ../../3rdparty/fmod/inc/fmod_errors.h; sourceTree = "<group>"; };
-		43B309681CBD28D000DF3017 /* fmod_ios.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fmod_ios.h; path = ../../3rdparty/fmod/inc/fmod_ios.h; sourceTree = "<group>"; };
-		43B309691CBD28D000DF3017 /* fmod_output.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fmod_output.h; path = ../../3rdparty/fmod/inc/fmod_output.h; sourceTree = "<group>"; };
-		43B3096A1CBD28D000DF3017 /* fmod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fmod.h; path = ../../3rdparty/fmod/inc/fmod.h; sourceTree = "<group>"; };
-		43B3096B1CBD28D000DF3017 /* fmod.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = fmod.hpp; path = ../../3rdparty/fmod/inc/fmod.hpp; sourceTree = "<group>"; };
+		43B309631CBD28D000DF3017 /* fmod_codec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fmod_codec.h; path = ../../3rdparty/fmod/headers/fmod_codec.h; sourceTree = "<group>"; };
+		43B309641CBD28D000DF3017 /* fmod_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fmod_common.h; path = ../../3rdparty/fmod/headers/fmod_common.h; sourceTree = "<group>"; };
+		43B309651CBD28D000DF3017 /* fmod_dsp_effects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fmod_dsp_effects.h; path = ../../3rdparty/fmod/headers/fmod_dsp_effects.h; sourceTree = "<group>"; };
+		43B309661CBD28D000DF3017 /* fmod_dsp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fmod_dsp.h; path = ../../3rdparty/fmod/headers/fmod_dsp.h; sourceTree = "<group>"; };
+		43B309671CBD28D000DF3017 /* fmod_errors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fmod_errors.h; path = ../../3rdparty/fmod/headers/fmod_errors.h; sourceTree = "<group>"; };
+		43B309681CBD28D000DF3017 /* fmod_ios.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fmod_ios.h; path = ../../3rdparty/fmod/headers/fmod_ios.h; sourceTree = "<group>"; };
+		43B309691CBD28D000DF3017 /* fmod_output.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fmod_output.h; path = ../../3rdparty/fmod/headers/fmod_output.h; sourceTree = "<group>"; };
+		43B3096A1CBD28D000DF3017 /* fmod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fmod.h; path = ../../3rdparty/fmod/headers/fmod.h; sourceTree = "<group>"; };
+		43B3096B1CBD28D000DF3017 /* fmod.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = fmod.hpp; path = ../../3rdparty/fmod/headers/fmod.hpp; sourceTree = "<group>"; };
 		43BA2E5A17733267007DCDF0 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSON.h; path = "../../3rdparty/playhaven-ios-1.13.1/JSON/JSON.h"; sourceTree = "<group>"; };
 		43BA2E5B17733267007DCDF0 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonBase.h; path = "../../3rdparty/playhaven-ios-1.13.1/JSON/SBJsonBase.h"; sourceTree = "<group>"; };
 		43BA2E5C17733267007DCDF0 /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonBase.m; path = "../../3rdparty/playhaven-ios-1.13.1/JSON/SBJsonBase.m"; sourceTree = "<group>"; };
@@ -16447,15 +16447,15 @@
 				COPY_PHASE_STRIP = YES;
 				DEAD_CODE_STRIPPING = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"../../3rdparty-ios/adcolony-3.2.1\"",
+					"\"../../3rdparty-ios/adcolony-4.1.2\"",
 					"\"../../3rdparty-ios/admob-7.24.0\"",
-					"\"../../3rdparty-ios/applovin-4.3.1\"",
-					"\"../../3rdparty-ios/chartboost-7.0.1\"",
+					"\"../../3rdparty-ios/applovin-6.10.3\"",
+					"\"../../3rdparty-ios/chartboost-8.0.4\"",
 					"\"../../3rdparty-ios/crittercism-5.6.8\"",
 					"\"../../3rdparty-ios/facebook-4.26.0\"",
 					"\"../../3rdparty-ios/revmob-10.0.0\"",
 					"\"../../3rdparty-ios/startapp-3.5.0\"",
-					"\"../../3rdparty-ios/vungle-5.2.0\"",
+					"\"../../3rdparty-ios/vungle-6.4.6\"",
 				);
 				GCC_ENABLE_CPP_EXCEPTIONS = NO;
 				GCC_ENABLE_CPP_RTTI = NO;
@@ -16525,7 +16525,7 @@
 					"\"../../3rdparty/curl-7.66.0/include-ios\"",
 					"\"../../3rdparty/curl-7.66.0/lib\"",
 					"\"../../3rdparty/expat-2.1.0/lib\"",
-					"\"../../3rdparty/fmod/inc\"",
+					"\"../../3rdparty/fmod/headers\"",
 					"\"../../3rdparty/freeglut-2.8.1/include\"",
 					"\"../../3rdparty/freetype-2.4.4/include\"",
 					"\"../../3rdparty/jansson-2.1/src\"",
@@ -18707,15 +18707,15 @@
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"../../3rdparty-ios/adcolony-3.2.1\"",
+					"\"../../3rdparty-ios/adcolony-4.1.2\"",
 					"\"../../3rdparty-ios/admob-7.24.0\"",
-					"\"../../3rdparty-ios/applovin-4.3.1\"",
-					"\"../../3rdparty-ios/chartboost-7.0.1\"",
+					"\"../../3rdparty-ios/applovin-6.10.3\"",
+					"\"../../3rdparty-ios/chartboost-8.0.4\"",
 					"\"../../3rdparty-ios/crittercism-5.6.8\"",
 					"\"../../3rdparty-ios/facebook-4.26.0\"",
 					"\"../../3rdparty-ios/revmob-10.0.0\"",
 					"\"../../3rdparty-ios/startapp-3.5.0\"",
-					"\"../../3rdparty-ios/vungle-5.2.0\"",
+					"\"../../3rdparty-ios/vungle-6.4.6\"",
 				);
 				GCC_ENABLE_CPP_EXCEPTIONS = NO;
 				GCC_ENABLE_CPP_RTTI = NO;
@@ -18784,7 +18784,7 @@
 					"\"../../3rdparty/curl-7.66.0/include-ios\"",
 					"\"../../3rdparty/curl-7.66.0/lib\"",
 					"\"../../3rdparty/expat-2.1.0/lib\"",
-					"\"../../3rdparty/fmod/inc\"",
+					"\"../../3rdparty/fmod/headers\"",
 					"\"../../3rdparty/freeglut-2.8.1/include\"",
 					"\"../../3rdparty/freetype-2.4.4/include\"",
 					"\"../../3rdparty/jansson-2.1/src\"",
@@ -23317,15 +23317,15 @@
 				COPY_PHASE_STRIP = YES;
 				DEAD_CODE_STRIPPING = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"../../3rdparty-ios/adcolony-3.2.1\"",
+					"\"../../3rdparty-ios/adcolony-4.1.2\"",
 					"\"../../3rdparty-ios/admob-7.24.0\"",
-					"\"../../3rdparty-ios/applovin-4.3.1\"",
-					"\"../../3rdparty-ios/chartboost-7.0.1\"",
+					"\"../../3rdparty-ios/applovin-6.10.3\"",
+					"\"../../3rdparty-ios/chartboost-8.0.4\"",
 					"\"../../3rdparty-ios/crittercism-5.6.8\"",
 					"\"../../3rdparty-ios/facebook-4.26.0\"",
 					"\"../../3rdparty-ios/revmob-10.0.0\"",
 					"\"../../3rdparty-ios/startapp-3.5.0\"",
-					"\"../../3rdparty-ios/vungle-5.2.0\"",
+					"\"../../3rdparty-ios/vungle-6.4.6\"",
 				);
 				GCC_ENABLE_CPP_EXCEPTIONS = NO;
 				GCC_ENABLE_CPP_RTTI = NO;
@@ -23395,7 +23395,7 @@
 					"\"../../3rdparty/curl-7.66.0/include-ios\"",
 					"\"../../3rdparty/curl-7.66.0/lib\"",
 					"\"../../3rdparty/expat-2.1.0/lib\"",
-					"\"../../3rdparty/fmod/inc\"",
+					"\"../../3rdparty/fmod/headers\"",
 					"\"../../3rdparty/freeglut-2.8.1/include\"",
 					"\"../../3rdparty/freetype-2.4.4/include\"",
 					"\"../../3rdparty/jansson-2.1/src\"",
@@ -23758,15 +23758,15 @@
 				COPY_PHASE_STRIP = YES;
 				DEAD_CODE_STRIPPING = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"../../3rdparty-ios/adcolony-3.2.1\"",
+					"\"../../3rdparty-ios/adcolony-4.1.2\"",
 					"\"../../3rdparty-ios/admob-7.24.0\"",
-					"\"../../3rdparty-ios/applovin-4.3.1\"",
-					"\"../../3rdparty-ios/chartboost-7.0.1\"",
+					"\"../../3rdparty-ios/applovin-6.10.3\"",
+					"\"../../3rdparty-ios/chartboost-8.0.4\"",
 					"\"../../3rdparty-ios/crittercism-5.6.8\"",
 					"\"../../3rdparty-ios/facebook-4.26.0\"",
 					"\"../../3rdparty-ios/revmob-10.0.0\"",
 					"\"../../3rdparty-ios/startapp-3.5.0\"",
-					"\"../../3rdparty-ios/vungle-5.2.0\"",
+					"\"../../3rdparty-ios/vungle-6.4.6\"",
 				);
 				GCC_ENABLE_CPP_EXCEPTIONS = NO;
 				GCC_ENABLE_CPP_RTTI = NO;
@@ -23836,7 +23836,7 @@
 					"\"../../3rdparty/curl-7.66.0/include-ios\"",
 					"\"../../3rdparty/curl-7.66.0/lib\"",
 					"\"../../3rdparty/expat-2.1.0/lib\"",
-					"\"../../3rdparty/fmod/inc\"",
+					"\"../../3rdparty/fmod/headers\"",
 					"\"../../3rdparty/freeglut-2.8.1/include\"",
 					"\"../../3rdparty/freetype-2.4.4/include\"",
 					"\"../../3rdparty/jansson-2.1/src\"",
