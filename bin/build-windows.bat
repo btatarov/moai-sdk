@@ -24,6 +24,7 @@ cd "build\build-vs2022"
 
 echo Creating Release Libs
 cmake -G "%generator%" ^
+-DCMAKE_GENERATOR_PLATFORM=x64 ^
 -DBUILD_WINDOWS=true ^
 -DMOAI_SDL=true ^
 -DMOAI_HTTP_CLIENT=true ^

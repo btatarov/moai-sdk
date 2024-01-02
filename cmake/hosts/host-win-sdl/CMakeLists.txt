@@ -23,10 +23,7 @@ include(platform-windows)
 include(platform-common)
 include(module-setup)
 
-
-
 include(libmoai-setup)
-
 
 add_subdirectory(../host-modules host-modules)
 

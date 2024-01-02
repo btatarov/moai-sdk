@@ -24,8 +24,8 @@
 #include "SDLKeyCodeMapping.h"
 
 #ifdef __APPLE__
-#include <CoreFoundation/CoreFoundation.h>
-#include <limits.h>
+	#include <CoreFoundation/CoreFoundation.h>
+	#include <limits.h>
 #endif
 
 #ifdef MOAI_OS_OSX
@@ -157,7 +157,8 @@ void _AKUSetTextInputRectFunc ( int xMin, int yMin, int xMax, int yMax ) {
 
 //----------------------------------------------------------------//
 void SDL_LoadWindowIcon () {
-    #ifdef MOAI_OS_WINDOWS
+	// TODO: fix
+    #ifdef MOAI_OS_WINDOWS__NEVER
     	const unsigned int mask_r = 0x00ff0000;
     	const unsigned int mask_g = 0x0000ff00;
     	const unsigned int mask_b = 0x000000ff;
@@ -228,13 +229,12 @@ void Init ( int argc, char** argv ) {
 
 	SDL_Init ( SDL_INIT_EVERYTHING );
 
-  #ifdef MOAI_OS_WINDOWS
-    ShowWindow(GetConsoleWindow(),SW_HIDE);
-
-  #endif
+  	#ifdef MOAI_OS_WINDOWS
+    	ShowWindow ( GetConsoleWindow (), SW_HIDE );
+  	#endif
 
 	#ifdef _DEBUG
-    PrintMoaiVersion ();
+    	PrintMoaiVersion ();
 		printf ( "DEBUG BUILD\n" );
 	#endif
 
@@ -293,11 +293,8 @@ void Init ( int argc, char** argv ) {
 					AKUCallFunc();
 			}
 	#else
-
-
 		AKUModulesParseArgs ( argc, argv );
 	#endif
-
 
 	atexit ( Finalize ); // do this *after* SDL_Init
 }
@@ -316,8 +313,6 @@ void _onMultiButton( int touch_id, float x, float y, int state ) {
 	);
 }
 
-
-
 //----------------------------------------------------------------//
 void SetScreenSize(DisplayModeFunc func ) {
 
@@ -328,38 +323,34 @@ void SetScreenSize(DisplayModeFunc func ) {
     }
 }
 
-
 //----------------------------------------------------------------//
 void SetScreenDpi() {
 
-#ifdef MOAI_OS_WINDOWS
+	// TODO: fix
+	#ifdef MOAI_OS_WINDOWS__NEVER
+		HDC hDC = GetWindowDC(NULL);
+		int widthInMm = GetDeviceCaps (hDC, HORZSIZE);
+		double widthInInches = widthInMm / 25.4;
+		int widthInPixels = GetDeviceCaps (hDC, HORZRES);
+		AKUSetScreenDpi ( ( int )( widthInPixels / widthInInches ));
 
-    HDC hDC = GetWindowDC(NULL);
-    int widthInMm = GetDeviceCaps(hDC, HORZSIZE);
-    double widthInInches = widthInMm / 25.4;
-    int widthInPixels = GetDeviceCaps(hDC, HORZRES);
-    AKUSetScreenDpi(( int )( widthInPixels / widthInInches ));
+	#elif defined(MOAI_OS_LINUX)
+		char* display_name = getenv ( "DISPLAY" );
+		if ( !display_name ) return;
 
-#elif defined(MOAI_OS_LINUX)
+		int nscreen = 0;
+		xcb_connection_t* conn = xcb_connect ( display_name, &nscreen );
+		if ( !conn ) return;
 
-	char* display_name = getenv( "DISPLAY" );
-	if ( !display_name ) return;
+		xcb_screen_t* screen = xcb_aux_get_screen( conn, nscreen );
 
-	int nscreen = 0;
-	xcb_connection_t* conn = xcb_connect( display_name, &nscreen );
-	if ( !conn ) return;
+		double widthInInches = screen->width_in_millimeters / 25.4;
+		int widthInPixels = screen->width_in_pixels;
 
-	xcb_screen_t* screen = xcb_aux_get_screen( conn, nscreen );
+		AKUSetScreenDpi(( int )widthInPixels / widthInInches );
 
-	double widthInInches = screen->width_in_millimeters / 25.4;
-	int widthInPixels = screen->width_in_pixels;
-
-	AKUSetScreenDpi(( int )widthInPixels / widthInInches );
-
-	xcb_disconnect( conn );
-
-#endif
-
+		xcb_disconnect( conn );
+	#endif
 }
 
 //----------------------------------------------------------------//
