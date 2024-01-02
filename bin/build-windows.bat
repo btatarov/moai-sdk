@@ -5,6 +5,12 @@ call "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build
 
 where lib || echo "Could not find lib.exe (are you in your VS developer tools prompt?)" && exit /b 1
 
+pushd .
+echo "Building SDL"
+cd %~dp0%\..\3rdparty\sdl2-2.28.5
+call build\build-windows.bat || echo "Could not build SDL" && exit /b 1
+popd
+
 set generator=Visual Studio 17
 
 cd %~dp0%..

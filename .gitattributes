@@ -1,9 +1,9 @@
-*.lua text
-*.cpp text
-*.c   text
-*.h   text
-*.sh 								eol=lf
-*.sln								eol=crlf
+# *.lua text
+# *.cpp text
+# *.c   text
+# *.h   text
+# *.sh 								eol=lf
+# *.sln								eol=crlf
 distribute/moai-sdk/legal.txt		eol=crlf
 distribute/moai-sdk/license.txt		eol=crlf
 distribute/moai-sdk/README.txt		eol=crlf
