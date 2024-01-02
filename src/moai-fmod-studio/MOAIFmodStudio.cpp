@@ -287,7 +287,7 @@ void MOAIFmodStudio::OpenSoundSystem ( u32 channels ) {
 	//FMOD::Debug_SetLevel(FMOD_DEBUG_ALL);
 	//FMOD::Debug_SetLevel(FMOD_DEBUG_LEVEL_ERROR);
 
-	result = FMOD_System_Create ( &this->mSoundSys ); // Create the main system object.
+	result = FMOD_System_Create ( &this->mSoundSys, FMOD_VERSION ); // Create the main system object.
 	if ( !MOAIFmodCheckError ( result ) ) return;
 
 #if defined(__ANDROID__)

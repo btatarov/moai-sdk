@@ -8,12 +8,12 @@ set ( FMOD_LIB_RPATH "" )
 
 if ( BUILD_WINDOWS )
     if ( MSVC )
-        set ( FMOD_LIB ${FMOD_LIB_ROOT}/windows/fmod_vc.lib )
-        set ( FMOD_LIB_DIR "${FMOD_LIB_ROOT}/windows/" )
+        set ( FMOD_LIB ${FMOD_LIB_ROOT}/windows/x64/fmod_vc.lib )
+        set ( FMOD_LIB_DIR "${FMOD_LIB_ROOT}/windows/x64/" )
         set ( FMOD_LIB_NAME "fmod_vc.lib" )
     else ( MSVC )
-        set ( FMOD_LIB ${FMOD_LIB_ROOT}/windows/fmod.dll )
-        set ( FMOD_LIB_DIR "${FMOD_LIB_ROOT}/windows/" )
+        set ( FMOD_LIB ${FMOD_LIB_ROOT}/windows/x64/fmod.dll )
+        set ( FMOD_LIB_DIR "${FMOD_LIB_ROOT}/windows/x64/" )
         set ( FMOD_LIB_NAME "fmod.dll" )
     endif ( MSVC )
 elseif ( BUILD_OSX )
@@ -39,7 +39,7 @@ if ( BUILD_IOS )
 endif ( BUILD_IOS )
 
 set ( FMOD_INCLUDES
-  "${MOAI_ROOT}/3rdparty/fmod/headers/"
+  "${MOAI_ROOT}/3rdparty/fmod/inc/"
 )
 
 set ( FMOD_HEADERS "${FMOD_INCLUDES}" PARENT_SCOPE )
