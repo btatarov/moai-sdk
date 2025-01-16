@@ -42,14 +42,17 @@ set -e
 cmake \
 -DBUILD_LINUX=TRUE \
 -DMOAI_SDL=TRUE \
--DMOAI_HTTP_CLIENT=TRUE \
--DMOAI_HTTP_SERVER=TRUE \
--DMOAI_CRYPTO=TRUE \
--DMOAI_LIBCRYPTO=TRUE \
+-DMOAI_LUAEXT=FALSE \
+-DMOAI_CURL=FALSE \
+-DMOAI_SQLITE3=FALSE \
+-DMOAI_CRYPTO=FALSE \
+-DMOAI_LIBCRYPTO=FALSE \
+-DMOAI_HTTP_CLIENT=FALSE \
+-DMOAI_HTTP_SERVER=FALSE \
 -DCMAKE_BUILD_TYPE=Release \
 -DCMAKE_INSTALL_PREFIX=$libprefix \
 $moai_root/cmake/hosts/host-linux-sdl
 
-cmake --build . --target install -- -j 4
+cmake --build . --target install -- -j 16
 
 cp $libprefix/bin/moai $moai_root/util/moai

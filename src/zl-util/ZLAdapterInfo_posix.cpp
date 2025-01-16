@@ -1,6 +1,6 @@
 /*	Useless Technologies - Version 1.0
 	All contents Copyright (c) 2009 by Patrick Meehan
-	
+
 	Permission is hereby granted, free of charge, to any person
 	obtaining a copy of this software and associated documentation
 	files (the "Software"), to deal in the Software without
@@ -31,7 +31,9 @@
 
 #if !( NACL || ANDROID )
   #include <sys/socket.h>
-  #include <sys/sysctl.h>
+  #if !(__linux)
+  	#include <sys/sysctl.h>
+  #endif
   #include <net/if.h>
 #endif
 
@@ -51,36 +53,36 @@ void ZLAdapterInfo::SetNameFromMACAddress ( u8* address, u32 length ) {
 }
 
 STLString ZLAdapterInfo::GetMACAddress () {
-	
+
 	char * msgBuffer = NULL;
 	USMacAddress macAddress;
 	memset ( macAddress.bytes , 0 , 6 );
-    
+
 #if __APPLE__
 	int mgmtInfoBase[6];
 	mgmtInfoBase[0] = CTL_NET;
 	mgmtInfoBase[1] = AF_ROUTE;
-	mgmtInfoBase[2] = 0;              
+	mgmtInfoBase[2] = 0;
 	mgmtInfoBase[3] = AF_LINK;
 	mgmtInfoBase[4] = NET_RT_IFLIST;
-    
+
 	if ( !(( mgmtInfoBase [ 5 ] = if_nametoindex ( "en0" )) == 0 ) ) {
-		
+
 		size_t length;
 		if ( !( sysctl ( mgmtInfoBase, 6, NULL, &length, NULL, 0 ) < 0 ) ) {
-			
+
 	    	if ( !(( msgBuffer = ( char * ) malloc ( length )) == NULL ) ) {
-		
+
 	    		if ( sysctl ( mgmtInfoBase, 6, msgBuffer, &length, NULL, 0 ) < 0 ) {
 					//error
 				}
-				
+
 				struct if_msghdr *interfaceMsgStruct = ( struct if_msghdr * ) msgBuffer;
 
 				struct sockaddr_dl *socketStruct = ( struct sockaddr_dl * ) ( interfaceMsgStruct + 1 );
 
 				memcpy ( macAddress.bytes, socketStruct->sdl_data + socketStruct->sdl_nlen, 6 );
-				
+
 				free(msgBuffer);
 			}
 		}
@@ -88,13 +90,13 @@ STLString ZLAdapterInfo::GetMACAddress () {
 #else
 	//ANDROID NOT IMPLEMENTED
 #endif
-	
+
 	char address[18];
 	memset ( address , 0 , 18 );
-	
+
 	sprintf( address, "%02X:%02X:%02X:%02X:%02X:%02X", macAddress.bytes[0], macAddress.bytes[1], macAddress.bytes[2], macAddress.bytes[3], macAddress.bytes[4], macAddress.bytes[5] );
 	STLString macString = address;
-	return macString;	
+	return macString;
 }
 //================================================================//
 // USAdapterInfoList

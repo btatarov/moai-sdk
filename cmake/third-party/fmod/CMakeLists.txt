@@ -22,9 +22,9 @@ elseif ( BUILD_OSX )
     set ( FMOD_LIB_NAME "libfmod.dylib" )
     set ( FMOD_LIB_RPATH "@loader_path/../lib" )
 elseif ( BUILD_LINUX )
-    set ( FMOD_LIB "${FMOD_LIB_ROOT}/linux/libfmod.so.10" )
+    set ( FMOD_LIB "${FMOD_LIB_ROOT}/linux/libfmod.so" )
     set ( FMOD_LIB_DIR "${FMOD_LIB_ROOT}/linux/" )
-    set ( FMOD_LIB_NAME "libfmod.so.10" )
+    set ( FMOD_LIB_NAME "libfmod.so" )
     set ( FMOD_LIB_RPATH "$ORIGIN/../lib" )
 elseif ( BUILD_ANDROID )
     set (FMOD_LIB "${FMOD_LIB_ROOT}/android/${ANDROID_ABI}/libfmod.so" )
@@ -48,6 +48,7 @@ set ( FMOD_LIB "${FMOD_LIB_NAME}" PARENT_SCOPE )
 
 add_custom_command ( OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/${FMOD_LIB_NAME}"
     COMMAND ${CMAKE_COMMAND} -E copy "${FMOD_LIB_DIR}/${FMOD_LIB_NAME}" "${CMAKE_CURRENT_BINARY_DIR}/${FMOD_LIB_NAME}"
+    COMMAND ${CMAKE_COMMAND} -E copy "${FMOD_LIB_DIR}/${FMOD_LIB_NAME}.10" "${CMAKE_CURRENT_BINARY_DIR}/${FMOD_LIB_NAME}.10"
 )
 
 add_custom_target ( fmod DEPENDS "${CMAKE_CURRENT_BINARY_DIR}/${FMOD_LIB_NAME}" )
