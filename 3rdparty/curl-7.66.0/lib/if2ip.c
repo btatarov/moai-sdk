@@ -44,7 +44,9 @@
 #  include <ifaddrs.h>
 #endif
 #ifdef HAVE_STROPTS_H
-#  include <stropts.h>
+    #if ! defined (__linux__)
+        #  include <stropts.h>
+    #endif
 #endif
 #ifdef __VMS
 #  include <inet.h>
